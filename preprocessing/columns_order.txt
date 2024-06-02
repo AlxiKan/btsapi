@@ -1,0 +1,13 @@
+age
+job
+marital
+education
+default
+balance
+housing
+loan
+contact
+month
+calls
+previous_calls
+previous_outcome

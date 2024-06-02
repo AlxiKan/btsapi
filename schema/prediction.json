@@ -1,0 +1,65 @@
+{
+	"type": "object",
+    "properties": {
+		"id": {
+			"type": "integer"
+		},
+		"contact": {
+			"type": "string",
+			"pattern": "^\\+30.*$"
+		},
+		"calls": {
+			"type": "integer",
+			"minimum": 0
+		},
+		"job": {
+			"type": "string",
+			"enum": [
+				"Managerial","Technician","Entrepreneur",
+				"Blue-Collar","Unknown","Retired",
+				"Administrative","Services","Self-Employed",
+				"Unemployed","Housemaid","Student"
+			]
+		},
+		"marital": {
+			"type": "string",
+			"enum": ["Married","Single","Divorced"]
+		},
+		"education": {
+			"type": "string",
+			"enum": ["Tertiary","Secondary","Unknown","Primary"]
+		},
+		"date_of_birth": {
+			"type": "string",
+			"format": "date"
+		},
+		"default": {
+			"type": "string",
+			"enum": ["Yes","No"]
+		},
+		"loan": {
+			"type": "string",
+			"enum": ["Yes","No"]
+		},
+		"housing": {
+			"type": "string",
+			"enum": ["Yes","No"]
+		},
+		"balance": {
+			"type": "integer"
+		},
+		"previous_calls": {
+			"type": "integer",
+			"minimum": 0
+		},
+		"previous_outcome": {
+			"type": "string",
+			"enum": ["Unknown","Failure","Success"]
+		}
+    },
+    "required": [
+		"id","calls","contact","job",
+		"marital","education","date_of_birth","loan",
+		"default","housing","balance","previous_calls",
+		"previous_outcome"]
+}
