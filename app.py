@@ -139,11 +139,11 @@ def training_new():
     try:
         # Check dataset's length
         if not len(request.json["data"]) > 999:
-            return jsonify({"Error": "Not enough data."})
+            return jsonify({"message": "Not enough data."})
 
         # Validate dataset's schema
         if not schema_validation(request.json["data"], prediction_schema):
-            return jsonify({"Error": "Validation error."})
+            return jsonify({"message": "Validation error."})
         
         # Convert request data to pandas dataframe and preprocessing
         data = pd.DataFrame(request.json["data"])
